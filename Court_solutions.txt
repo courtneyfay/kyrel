@@ -1,0 +1,222 @@
+COURTNEY FAY - DAY 1
+## INTRODUCTION TO COMMANDS
+
+1. turn_3rd_cell_blue - [solution](/challenges/solutions/turn_3rd_cell_blue.js)
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['.', '.', 'b', '.', '.']
+
+  function main() {
+    moveRight();
+    moveRight();
+    useBlue();
+    draw();
+  }
+
+2. erase_3rd_cell - [solution](/challenges/solutions/erase_3rd_cell.js)
+  
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['b', 'b', '.', 'b', 'b']
+  
+  function main() {
+    moveRight();
+    moveRight();
+    erase();
+  }
+
+3. every_other_erase - [solution](/challenges/solutions/every_other_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['b', '.', 'b', '.', 'b']
+
+  function main() {
+    for (var i = 0; i < 2; i++) {
+      moveRight();
+      erase();
+      moveRight();
+    }
+  }
+
+4. every_other_blue - [solution](/challenges/solutions/every_other_blue.js)
+
+  * start:  ['g', 'g', 'g', '.', '.']
+  * finish: ['g', 'b', 'g', 'b', '.']
+
+  function main() {
+    for (var i = 0; i < 2; i++) {
+      moveRight();
+      draw();
+      moveRight();
+    }
+  }
+
+5. move_start_to_finish - [solution](/challenges/solutions/move_start_to_finish.js)
+
+  * start:  ['b', '.', '.', '.', '.']
+  * finish: ['.', '.', '.', '.', 'b']
+
+  function main() {
+    erase();
+    for (var i = 0; i < 4; i++) {
+      moveRight();
+    }
+    draw();
+  }
+
+  * start:  ['g', '.', '.', '.', '.']
+  * finish: ['.', '.', '.', '.', 'g']
+
+  function main() {
+    erase();
+    for (var i = 0; i < 4; i++) {
+      moveRight();
+    }
+    useGreen();
+    draw();
+  }
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['.', '.', '.', '.', '.']
+
+  function main() {
+    
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  COURTNEY FAY - DAY 2
+  ## BASIC FOR LOOPS & CONDITIONALS
+
+  1. all_blue - [solution](/challenges/solutions/all_blue.js)
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['b', 'b', 'b', 'b', 'b']
+
+  function main() {
+    for (var i = 0; i < initial_state.length; i++) {
+      draw();
+      moveRight();
+    }
+  }
+
+2. all_first_color - [solution](/challenges/solutions/all_first_color.js)
+
+  * start:  ['b', '.', '.', '.', '.']
+  * finish: ['b', 'b', 'b', 'b', 'b']
+
+  function main() {
+    for (var i = 0; i < initial_state.length; i++) {
+      moveRight();
+      draw();
+    }
+  }
+
+  * start:  ['g', '.', '.', '.', '.']
+  * finish: ['g', 'g', 'g', 'g', 'g']
+
+  function main() {
+    for (var i = 0; i < initial_state.length; i++) {
+      useGreen();
+      moveRight();
+      draw();
+    }
+  }
+
+3. n_in_a_row - [solution](/challenges/solutions/n_in_a_row.js)
+
+  * start:  ['.', '.', '.', '.', '.']
+  * finish: ['b', 'b', '.', '.', '.']  \(given n is 2)
+
+  function main() {
+    var n = 2;
+
+    for (var i = 0; i < n; i++) {
+      draw();
+      moveRight();
+    }
+  }
+
+  * finish: ['b', 'b', 'b', '.', '.']  \(given n is 3)
+
+  function main() {
+    var n = 3;
+
+    for (var i = 0; i < n; i++) {
+      draw();
+      moveRight();
+    }
+  }
+
+4. every_even_erase - [solution](/challenges/solutions/every_even_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['.', 'b', '.', 'b', '.']
+
+  function main() {
+    for (var i = 0; i < initial_state.length; i++) {
+      erase();
+      moveRight();
+      moveRight();
+    }
+  }
+  
+5. every_odd_erase - [solution](/challenges/solutions/every_odd_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['b', '.', 'b', '.', 'b']
+
+  function main() {
+    
+  }
+  
+6. every_n_erase - [solution](/challenges/solutions/every_n_erase.js)
+
+  * start:  ['b', 'b', 'b', 'b', 'b']
+  * finish: ['.', '.', '.', '.', '.'] // (given n is 1)
+
+  function main() {
+    
+  }
+
+  * finish: ['b', '.', 'b', '.', 'b'] // (given n is 2)
+
+  function main() {
+    
+  }
+
+  * finish: ['b', 'b', 'b', 'b', '.'] // (given n is 5)
+
+  function main() {
+    
+  }
+
+7. move_the_blue_dot_one_to_the_right - [solution](/challenges/solutions/move_the_blue_dot_one_to_the_right.js)
+
+  * start:  ['.', '.', 'b', '.', '.']
+  * finish: ['.', '.', '.', 'b', '.']
+
+  function main() {
+    
+  }
+  
+  * start:  ['g', 'b', '.', '.', 'g']
+  * finish: ['g', '.', 'b', '.', 'g']
+
+  function main() {
+    
+  }
+  
+8. delete_before - [solution](/challenges/solutions/delete_before.js)
+
+  * start:  [ 'g', 'b', '.', '.', '.' ]
+  * finish: [ '.', 'b', '.', '.', '.' ]
+
+  function main() {
+    
+  }
+
+  * start:  [ 'g', 'b', 'b', '.', '.' ]
+  * finish: [ '.', '.', 'b', '.', '.' ]
+
+  function main() {
+    
+  }

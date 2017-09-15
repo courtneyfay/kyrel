@@ -19,7 +19,10 @@ var row, colors, kyrel, return_value, rando;
     'g' => green
 */
 
-var initial_state = ['.', '.', '.', '.', '.'];
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
+
+// * start:  ['b', 'b', 'b', 'b', 'b']
+//   * finish: ['b', '.', 'b', '.', 'b']
 
 function main(n) {
 
@@ -29,7 +32,17 @@ function main(n) {
   ////                          ////
   //////////////////////////////////
 
-    
+   moveRight();
+
+  for (var i = 0; i < 4; i++) {
+    erase();
+    moveRight();
+    moveRight();
+
+  
+
+    console.log(kyrel.x);
+  }
 
   //////////////////////////////////
   ////                          ////
